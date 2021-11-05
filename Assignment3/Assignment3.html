@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>CSS Website Layout</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="dh.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+
+<div id="container">
+    <div id="header">
+        <!--<input type="button" id="save" value="Save" onclick="setColor(event, 'button')"; data-count="1" /> -->
+        <!--<button class="button" id="button"><span><img class="resize" src="share.png">Share </span></button> -->
+    </div>
+
+
+    <div class="tabs">
+        <input type="radio" name="tabs" id="tabone" checked="checked">
+        <label for="tabone" class="tabone" >PRIVATE</label>
+        <div class="tab">
+            <button class="notcollapsible-private"><img class="resize" src="uploadprivate.png">UPLOAD FILE</button>
+            <button class="notcollapsible-private"><img class="resize" src="newprojectprivate.png">NEW PROJECT</button>
+            <div class="">
+            </div>
+            <button class="collapsible-private">ACTIVE PROJECTS</button>
+            <div class="content">
+                <p>subcategory1</p>
+            </div>
+            <button class="collapsible-private">ARCHIVE</button>
+            <div class="content">
+                <p>subcategory2</p>
+            </div>
+            <button class="collapsible-private">BIN</button>
+            <div class="content">
+                <p>subcategory3</p>
+            </div>
+        </div>
+
+        <input type="radio" name="tabs" id="tabtwo">
+        <label for="tabtwo" class="tabtwo">SHARED</label>
+        <div class="tab">
+            <button class="notcollapsible-shared"><img class="resize" src="uploadshared.png">UPLOAD FILE</button>
+            <button class="notcollapsible-shared"><img class="resize" src="newprojectshared.png">NEW PROJECT</button>
+            <div class="">
+            </div>
+            <button class="collapsible-shared">ACTIVE PROJECTS</button>
+            <div class="content">
+                <p>subcategory1</p>
+            </div>
+            <button class="collapsible-shared">ARCHIVE</button>
+            <div class="content">
+                <p>subcategory2</p>
+            </div>
+            <button class="collapsible-shared">BIN</button>
+            <div class="content">
+                <p>subcategory3</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="file-area">
+
+        <div id="file-items">
+            <div class="container">
+                <div class="breadcrumb", style="background: none; padding-left: 0px; padding-bottom: 0px; padding-right: 0px; margin-bottom: 0px">
+                    <div class="item">
+                        <h2><a href="#root"> / root / </a></h2>
+                    </div>
+                </div>
+                <!--- <div class="items">
+                     <ul>
+                         <li><a href="#private">private</a></li>
+                         <li><a href="#shared">shared</a></li>
+                     </ul>
+                 </div>--->
+                <br>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>PROGRESS</th>
+                        <th>PERMISSIONS</th>
+                        <th>LAST MODIFIED</th>
+                        <th>SIZE</th>
+                        <th>OPTIONS</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Infosys330 A3.pdf</td>
+                        <td>
+                            <div style="text-align:left; padding-left: 20px ">
+                                <span class="red-dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </td>
+                        <td>john@example.com</td>
+                        <td>Today</td>
+                        <td>500MB</td>
+                        <td>
+                            <div>
+                                <div class="icon">
+                                    <i class="material-icons">person</i>
+                                    <span>View Members</span>
+                                </div>
+
+                                <div class="icon">
+                                    <i class="material-icons">edit</i>
+                                    <span>Rename</span>
+                                </div>
+
+                                <div class="icon">
+                                    <i class="material-icons">search</i>
+                                    <span>Search</span>
+                                </div>
+
+                                <div class="icon">
+                                    <i class="material-icons">delete</i>
+                                    <span>Delete</span>
+                                </div>
+
+                                <div class="icon">
+                                    <i class="material-icons">settings</i>
+                                    <span>Drive Settings</span>
+                                </div>
+
+                                <div class="icon" id="button">
+                                    <i class="material-icons">share</i>
+                                    <span>Share</span>
+                                </div>
+                            </div>
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td>newproject.PNG</td>
+                        <td>
+                            <div style="text-align:left; padding-left: 20px ">
+                                <span class="orange-dot"></span>
+                                <span class="orange-dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </td>
+                        <td>tina@example.com</td>
+                        <td>Yesterday</td>
+                        <td>20MB</td>
+                        <td>
+                            <div>
+                                <div class="icon">
+                                    <i class="material-icons">person</i>
+                                    <span>View Members</span>
+                                </div>
+
+                                <div class="icon">
+                                    <i class="material-icons">edit</i>
+                                    <span>Rename</span>
+                                </div>
+
+                                <div class="icon">
+                                    <i class="material-icons">search</i>
+                                    <span>Search</span>
+                                </div>
+
+                                <div class="icon">
+                                    <i class="material-icons">delete</i>
+                                    <span>Delete</span>
+                                </div>
+
+                                <div class="icon">
+                                    <i class="material-icons">settings</i>
+                                    <span>Drive Settings</span>
+                                </div>
+
+                                <div class="icon" id="button2">
+                                    <i class="material-icons">share</i>
+                                    <span>Share</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>A3.html</td>
+                        <td>
+                            <div style="text-align:left; padding-left: 20px ">
+                                <span class="green-dot"></span>
+                                <span class="green-dot"></span>
+                                <span class="green-dot"></span>
+                            </div>
+                        </td>
+                        <td>sam@example.com</td>
+                        <td>Yesterday</td>
+                        <td>150MB</td>
+                        <td>
+                            <div>
+                                <div class="icon">
+                                    <i class="material-icons">person</i>
+                                    <span>View Members</span>
+                                </div>
+
+                                <div class="icon">
+                                    <i class="material-icons">edit</i>
+                                    <span>Rename</span>
+                                </div>
+
+                                <div class="icon">
+                                    <i class="material-icons">search</i>
+                                    <span>Search</span>
+                                </div>
+
+                                <div class="icon">
+                                    <i class="material-icons">delete</i>
+                                    <span>Delete</span>
+                                </div>
+
+                                <div class="icon">
+                                    <i class="material-icons">settings</i>
+                                    <span>Drive Settings</span>
+                                </div>
+
+                                <div class="icon" id="button3">
+                                    <i class="material-icons">share</i>
+                                    <span>Share</span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</div>
+
+    <div class="pop-up">
+        <div class="pop-up-content">
+            <div class="close">+</div>
+            <h2 style="text-align: left;">Share With Others</h2>
+            <input style="width: 90%; display: block; margin: 10px 2px;" type="text" placeholder="Add names or email addresses">
+            <input style="width: 90%; display: block; margin: 10px 2px;" type="text"type="text" placeholder="Assign to team members">
+            <div>
+            <input style="margin 15px 2px;" type="checkbox" id="message" name="message" value="yes">
+            <label for="message">Track Changes</label>
+            </div>
+            <div>
+            <input style="margin 15px 2px;" type="checkbox" id="message1" name="message" value="yes">
+            <label for="message1">Email me with any changes</label>
+            </div>
+            <button class="button" id="button-close" style="text-align: center;"><span>Share</span></button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    var coll_private = document.getElementsByClassName("collapsible-private");
+    var coll_shared = document.getElementsByClassName("collapsible-shared");
+    var i;
+
+    for (i = 0; i < coll_private.length; i++) {
+        coll_private[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        })
+        coll_shared[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        })
+        ;
+    }
+
+    function setColor(e, btn, color) {
+        var target = e.target,
+            count = +target.dataset.count;
+
+        target.style.backgroundColor = count === 1 ? "gold" : '#FFFFFF';
+        target.dataset.count = count === 1 ? 0 : 1;
+    }
+
+    $('.items a').on('click', function() {
+        var $this = $(this),
+            $bc = $('<div class="item"></div>');
+
+        $this.parents('li').each(function(n, li) {
+            var $a = $(li).children('a').clone();
+            $bc.prepend(' / ', $a);
+        });
+        $('.breadcrumb').html( $bc.prepend('<a href="#root">/root</a>') );
+        return false;
+    })
+
+    document.getElementById('button').addEventListener('click' ,function(){
+        document.querySelector('.pop-up').style.display = 'flex';
+    });
+
+    document.getElementById('button2').addEventListener('click' ,function(){
+        document.querySelector('.pop-up').style.display = 'flex';
+    });
+
+    document.getElementById('button3').addEventListener('click' ,function(){
+        document.querySelector('.pop-up').style.display = 'flex';
+    });
+
+    document.querySelector('.close').addEventListener('click',function(){
+        document.querySelector('.pop-up').style.display = 'none';
+    });
+
+    document.getElementById('button-close').addEventListener('click' ,function(){
+        document.querySelector('.pop-up').style.display = 'none';
+    });
+</script>
+
+<body>
+
+
+</body>
+</html>

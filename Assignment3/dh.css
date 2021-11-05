@@ -1,0 +1,292 @@
+body{
+    background: rgb(0,13,105);
+    background: linear-gradient(135deg, rgba(0,13,105,0.6460959383753502) 0%, rgba(255,221,76,0.5536589635854341) 95%);
+}
+
+#container{
+    width: auto;
+    height: auto;
+}
+
+#header{
+    height: 60px;
+
+}
+
+#menu{
+    width: 25%;
+    height: 1000px;
+    float: left;
+}
+#file-area{
+    height: 1000px;
+    width: 75%;
+    float: right;
+}
+
+#file-item-description{
+    height: 5%;
+    float: top;
+}
+#file-items{
+    height: 95%;
+    float: bottom;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    width: 25%;
+}
+.tabs label {
+    order: 1;
+    display: block;
+    width: 50%;
+    padding-top: 16px;
+    padding-right: 32px;
+    padding-left: 32px;
+    padding-bottom: 16px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background ease 0.2s;
+    text-align: center;
+}
+.tabs .tab {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+}
+.tabs input[type="radio"] {
+    display: none;
+}
+.tabs .tabone input[type="radio"]:checked + label {
+    background: orange;
+}
+
+.tabs .tabtwo input[type="radio"]:checked + label {
+    background: blue;
+}
+
+.tabs input[type="radio"]:checked + label + .tab {
+    display: block;
+}
+
+.tabs .tabone {
+    background-color: rgba(1, 12, 101, .1);
+    color:  rgb(255,221,76);
+}
+
+.tabs .tabtwo{
+    background-color: rgba(255,221,76,.6);
+    color: rgb(1, 12, 101);
+;
+}
+
+
+@media (max-width: 720px) {
+    .tabs .tab,
+    .tabs label {
+        order: initial;
+    }
+    .tabs label {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+.collapsible-shared, .notcollapsible-shared {
+    background-color: rgba(255,221,76,.6);
+    color: rgb(1, 12, 101);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+.collapsible-private, .notcollapsible-private {
+    background-color: rgba(1, 12, 101, .1);
+    color:  rgb(255,221,76);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+
+.active, .collapsible-private:hover, .collapsible-shared:hover, .notcollapsible-private:hover, .notcollapsible-shared:hover {
+    background-color: rgba(255,221,76,.1);
+}
+
+.collapsible-shared:after {
+    content: '\002B';
+    color: rgb(1, 12, 101);
+    font-weight: bold;
+    float: left;
+    margin-right: 20px;
+}
+
+
+.collapsible-private:after{
+    content: '\002B';
+    color:  rgb(255,221,76);
+    font-weight: bold;
+    float: left;
+    margin-right: 20px;
+}
+
+
+
+
+
+.active:after {
+    content: "\2212";
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+.resize {
+    width: 20px;
+    margin-right: 10px;
+    margin-left: -5px;
+}
+
+.button {
+    border-radius: 4px;
+    background-color: #0066CD;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    width: 120px;
+    height: 40px;
+    transition: all 0.5s;
+    cursor: pointer;
+    float: right;
+    margin: 10px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+.red-dot {
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.orange-dot {
+    height: 15px;
+    width: 15px;
+    background-color: orange;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+.green-dot {
+    height: 15px;
+    width: 15px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.icon {
+    position: relative;
+    display: inline-block;
+}
+
+.icon i{
+    display: block;
+}
+
+.icon span{
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.6s opacity;
+}
+
+.icon:hover > span{
+    opacity: 1;
+}
+
+.pop-up{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.pop-up-content{
+    width: 1000px;
+    height: 600px;
+    background-color: white;
+    border-radius: 14px;
+    padding: 30px;
+    position: relative;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 4px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
